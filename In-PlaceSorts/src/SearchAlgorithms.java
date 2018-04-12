@@ -3,7 +3,8 @@ import java.util.Arrays;
 /*Author: Mamadou Diallo
 Project: In place Sorts
 Date: 2/1/18 */
-public class SearchAlgorithms {
+public class SearchAlgorithms
+{
 	public static void main(String[] args)
 	{
 	//testing Arrays
@@ -41,7 +42,6 @@ public class SearchAlgorithms {
 		nums[index] = nums[index1];
 		nums[index1] = temp;
 	}
-
 	public static void InsertionSort(int[]nums)
 	{
 		int n = nums.length;                    //initialize variable
@@ -56,40 +56,62 @@ public class SearchAlgorithms {
 			}
 			nums[i+1] = key;//repeat the above, excluding the value used previously
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 	public static void SelectionSort(double[]dubs)
 	{
-		
+		int l = dubs.length;
+		for(int i = 1; i < l-1; i++)
+		{
+			int min = i;
+			for(int j = 0;j < i; j++)
+			{
+				if(dubs[j]<dubs[min])
+				{
+					min = j;
+				}
+				double temp = dubs[min];
+	            dubs[min] = dubs[i];
+	            dubs[i] = temp;
+			}
+		}
 	}
-
-	public static void BubbleSort(String[]words)
+	public static void BubbleSort(String[]words)//Starts from last index
 	{
+		for(int i = words.length-1; i >= 1;i--)
+		{
+			for(int j = i-1; j >= 0; j--)
+			{
+				if(words[i].compareTo(words[j]) < 0)
+				{
+					String temp = words[i];
+					words[i] = words[j];
+					words[j] = temp;
+				}
+			}
+		}
 	}
-	}
+	/*public static void BubbleSort(String[]words) //Starts from first index
+	{
+		for(int i = 0; i <= words.length-2;i++)
+		{
+			for(int j = i+1; j <= words.length-1; j++)
+			{
+				if(words[i].compareTo(words[j]) > 0)
+				{
+					String temp = words[i];
+					words[i] = words[j];
+					words[j] = temp;
+				}
+			}
+		}
+	}*/
+}
+
+		
+		
+
+	
+	
 
 
 
