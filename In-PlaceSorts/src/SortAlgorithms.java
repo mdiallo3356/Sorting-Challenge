@@ -1,9 +1,8 @@
 import java.util.Arrays;
-
 /*Author: Mamadou Diallo
 Project: In place Sorts
-Date: 2/1/18 */
-public class SearchAlgorithms
+Date: 4/11/2018 */
+public class SortAlgorithms
 {
 	public static void main(String[] args)
 	{
@@ -90,21 +89,7 @@ public class SearchAlgorithms
 			}
 		}
 	}
-	/*public static void BubbleSort(String[]words) //Starts from first index
-	{
-		for(int i = 0; i <= words.length-2;i++)
-		{
-			for(int j = i+1; j <= words.length-1; j++)
-			{
-				if(words[i].compareTo(words[j]) > 0)
-				{
-					String temp = words[i];
-					words[i] = words[j];
-					words[j] = temp;
-				}
-			}
-		}
-	}*/
+	
 }
 
 		
